@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background-color: #48133f*/;
+    background: transparent;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.logo img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    max-width: 41%;
+}
+
+.main-width {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(61deg, #612b81 0%, #7a2664 45%, #892146 85%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav .nav-list {
+    list-style: none;
+}
+
+nav .nav-list li {
+    display: inline-block;
+}
+
+nav .nav-list li a {
+    display: inline-block;
+    color: #eee;
+    margin-left: 55px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .nav-list li a:hover {
+    color: #0086ff;
+    transition: .4s;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.container .hero-text {
+    margin-bottom: 40px;
+}
+
+.container .hero-text h1 {
+    color: #ffffff;
+    margin: 20px 0 20px;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+span {
+    color: #0086ff;
+}
+
+.container .hero-text p {
+    color: #eee;
+    width: 440px;
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.socials a {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #eee;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socials a:hover {
+    scale: 1.3;
+    background: #0086ff;
+    transition: .4s;
+}
+
+.container .hero-text button {
+    cursor: pointer;
+    color: #eee;
+    background: #0086ff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #0086ff;
+    border-radius: 30px;
+}
+
+.container .hero-text button:hover {
+    color: #0086ff;
+    background: transparent;
+    border: 2px solid #0086ff;
+    transition: .4s;
+}
