@@ -29,28 +29,70 @@
 
             <div class="container">
                 <div class="hero-text">
+                    <h2>Just,</h2>
                     <h1><span class="input"></span></h1>
-                    <p>Hard work<br>Dedication<br>Again and Again</p>
-                    <div class="socials">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <button type="button">Buy it !</button>
                 </div>
+            </div>
+
+            <div class="gallery">
+                <div>
+                    <img class="gallery-item gallery-item-1" src="/ressources/sneaker.png" data-index="1">
+                </div>
+                <div>
+                    <img class="gallery-item gallery-item-2" src="/ressources/sneaker.png" data-index="2">
+                </div>
+                <div>
+                    <img class="gallery-item gallery-item-3" src="/ressources/sneaker.png" data-index="3">
+                </div>
+            </div>
+            <div class="gallery-controls"></div>
+
+            <div class="gallery-item-description">
+                <p>Inspired by the original AJ1, the Air Jordan 1 Mid allows fans to follow in MJ's footsteps. With its new colorway, this model with classic and sleek materials is back on trend.<br> 
+                    Color shown: Royal Purple/White/Black<br>Item: 554724-660</p>
+            </div>
+
+            <div class="buy-btn">
+                <a  class="animated-btn" href="https://wethenew.com/products/air-jordan-1-retro-high-og-court-purple-white?variant=40381241294957&gclid=CjwKCAiA7IGcBhA8EiwAFfUDseXQKMW3XEDz3M1qA-aVHgwXyxFbr7740nkFPPmbyLS7O_O_6zljHhoC87MQAvD_BwE&gclsrc=aw.ds">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Purchase
+                </a>
             </div>
         </div>
     </section>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <!--script for the h1 type animation-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         let typed = new Typed(".input", {
             strings:["Dream it !", "Do it !"],
             typeSpeed: 70,
-            backSpeed:65,
+            backSpeed:67,
             loop:true
         });
     </script>
-</body>
+
+    <!--script for the sneaker 3d animation-->
+    <script>
+        const sneakerItem = document.querySelector('.gallery-item');
+    sneakerItem.addEventListener('mousemove', (e) => {
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 10;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 10;
+        sneakerItem.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+    sneakerItem.addEventListener('mouseenter', (e) => {
+        sneakerItem.style.transition = 'none';
+    });
+    sneakerItem.addEventListener('mouseleave', (e) => {
+        sneakerItem.style.transition = 'all 0.5s ease';
+        sneakerItem.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
+    </script>
+
+    <!--script for the controls (Previous & Next)-->
+    <script src="script-slide-through-gallery.js"></script>
+</body> 
 </html>
